@@ -3,36 +3,29 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
-  MapPinIcon,
   TwitterIcon,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Sidebar from "./components/Sidebar";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen flex flex-row gap-10 justify-center  ">
+    <div
+      className="w-full min-h-screen flex flex-row gap-10 justify-center  "
+      id="Home"
+    >
       <Sidebar />
-      <div className="max-w-[600px]  flex flex-col gap-10 items-start pt-10 px-10 sm:pt-20 sm:px-8 border-0 lg:border-l min-h-screen">
+      <div className="max-w-[700px]  flex flex-col gap-10 items-start pt-10 px-10 sm:pt-20 sm:px-8 border-0 lg:border-x min-h-screen">
         <ProfileHeader />
 
         <AboutMe />
-        {/* <SocialLinks /> */}
+        <Projects />
       </div>
     </div>
   );
 }
-
-const Sidebar = () => {
-  return (
-    <div className="pt-10 h-screen sticky top-0 hidden lg:block ">
-      <p>Home</p>
-      <p>Projects</p>
-      <p>Experience</p>
-      <p>Blogs</p>
-    </div>
-  );
-};
 
 const SocialLinks = () => {
   return (
@@ -88,11 +81,6 @@ const ProfileHeader = () => {
             Full stack developer, working remotely.
             <span></span>
           </p>
-        </div>
-
-        <div className="flex gap-2 items-center pt-2">
-          <MapPinIcon className="w-3 h-3 text-gray-400 hover:text-blue-300 cursor-pointer" />
-          <p className="text-[12px] text-gray-600">New Delhi, India</p>
         </div>
       </div>
     </div>
