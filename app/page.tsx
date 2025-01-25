@@ -11,8 +11,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full ">
-      <div className="max-w-[550px] sm:mx-auto flex flex-col gap-10 items-start pt-10 px-10 sm:pt-20 sm:px-0  ">
+    <div className="w-full min-h-screen flex flex-row gap-10 justify-center  ">
+      <Sidebar />
+      <div className="max-w-[600px]  flex flex-col gap-10 items-start pt-10 px-10 sm:pt-20 sm:px-8 border-0 lg:border-l min-h-screen">
         <ProfileHeader />
 
         <AboutMe />
@@ -21,6 +22,17 @@ export default function Home() {
     </div>
   );
 }
+
+const Sidebar = () => {
+  return (
+    <div className="pt-10 h-screen sticky top-0 hidden lg:block ">
+      <p>Home</p>
+      <p>Projects</p>
+      <p>Experience</p>
+      <p>Blogs</p>
+    </div>
+  );
+};
 
 const SocialLinks = () => {
   return (
