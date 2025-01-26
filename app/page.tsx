@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <PageLoadAnimation>
       <div
-        className="w-full min-h-screen flex flex-row gap-10 justify-center  "
+        className="w-full min-h-screen flex flex-row gap-10 justify-center "
         id="About"
       >
         {/* <Sidebar /> */}
-        <div className="max-w-[700px]  flex flex-col gap-10 items-start py-10 px-8 sm:py-20 sm:px-8  min-h-screen">
+        <div className="flex flex-col gap-10 items-start ">
           <ProfileHeader />
 
           <AboutMe />
@@ -32,7 +32,7 @@ export default function Home() {
 
 const AboutMe = () => {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 ">
       <h1 className="text-sm">About</h1>
       <p className="text-sm/6 text-gray-600 tracking-wide">
         I’m a 22-year-old full-stack developer with a passion for designing and

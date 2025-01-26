@@ -29,7 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${graphik.className} antialiased`}>{children}</body>
+      <body className={`${graphik.className} antialiased w-full min-h-screen`}>
+        <div className="max-w-[700px] mx-auto py-10 px-6 lg:px-10 lg:py-20  min-h-screen">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
