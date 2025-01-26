@@ -5,13 +5,13 @@ const Projects = () => {
   return (
     <div id="Projects" className="flex flex-col gap-8 w-full">
       <h1 className="text-base ">Projects</h1>
-      <div className="flex flex-col gap-10 w-full">
+      <div className="flex flex-col gap-10 w-full pl-4 lg:pl-0">
         {ProjectItems.map((item, index) => (
           <div
             key={index}
-            className="flex flex-row justify-start items-start gap-10 sm:gap-20 w-full"
+            className="flex flex-col lg:flex-row justify-start items-start gap-2 lg:gap-10  w-full"
           >
-            <p className="text-xs text-gray-400 ">{item.date}</p>
+            <p className="text-sm text-gray-400 min-w-[150px] ">{item.date}</p>
             <div className="flex flex-col gap-1 ">
               <div className=" flex flex-row items-center gap-4 w-full ">
                 <a
@@ -26,7 +26,9 @@ const Projects = () => {
                   />
                 </a>
               </div>
-              <p className="text-sm text-gray-500 ">{item.description}</p>
+              <p className="text-sm text-gray-500 tracking-wide ">
+                {item.description}
+              </p>
               {/* <ImageGallery imagesUrl={item.images} /> */}
             </div>
           </div>

@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "./components/Sidebar";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 export default function Home() {
   return (
@@ -17,11 +18,12 @@ export default function Home() {
       id="Home"
     >
       <Sidebar />
-      <div className="max-w-[700px]  flex flex-col gap-10 items-start pt-10 px-8 sm:pt-20 sm:px-8 border-0 lg:border-x-[0.5px]  min-h-screen">
+      <div className="max-w-[700px]  flex flex-col gap-10 items-start pt-10 px-8 sm:py-20 sm:px-8 border-0 lg:border-x-[0.5px]  min-h-screen">
         <ProfileHeader />
 
         <AboutMe />
         <Projects />
+        <Experience />
       </div>
     </div>
   );
