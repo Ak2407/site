@@ -13,8 +13,8 @@ export default function Home() {
       className="w-full min-h-screen flex flex-row gap-10 justify-center  "
       id="About"
     >
-      <Sidebar />
-      <div className="max-w-[700px]  flex flex-col gap-10 items-start py-10 px-8 sm:py-20 sm:px-8 border-0 lg:border-l-[0.5px]  min-h-screen">
+      {/* <Sidebar /> */}
+      <div className="max-w-[700px]  flex flex-col gap-10 items-start py-10 px-8 sm:py-20 sm:px-8  min-h-screen">
         <ProfileHeader />
 
         <AboutMe />
@@ -34,7 +34,8 @@ const AboutMe = () => {
       <p className="text-sm/6 text-gray-600 tracking-wide">
         I’m a 22-year-old full-stack developer with a passion for designing and
         building things. When I’m not in the terminal, you’ll probably find me
-        gaming, reading, or fine-tuning my Neovim setup. Here is my{" "}
+        gaming, reading, or talking to AI assistant to write code for me 😉 .
+        Here is my{" "}
         <span className="group">
           <Link
             className="text-blue-500 hover:underline underline-offset-2 hover:text-blue-400"
