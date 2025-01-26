@@ -6,24 +6,27 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
+import { PageLoadAnimation } from "./components/page-load";
 
 export default function Home() {
   return (
-    <div
-      className="w-full min-h-screen flex flex-row gap-10 justify-center  "
-      id="About"
-    >
-      {/* <Sidebar /> */}
-      <div className="max-w-[700px]  flex flex-col gap-10 items-start py-10 px-8 sm:py-20 sm:px-8  min-h-screen">
-        <ProfileHeader />
+    <PageLoadAnimation>
+      <div
+        className="w-full min-h-screen flex flex-row gap-10 justify-center  "
+        id="About"
+      >
+        {/* <Sidebar /> */}
+        <div className="max-w-[700px]  flex flex-col gap-10 items-start py-10 px-8 sm:py-20 sm:px-8  min-h-screen">
+          <ProfileHeader />
 
-        <AboutMe />
-        <Projects />
-        <Experience />
-        <Blogs />
-        <Contact />
+          <AboutMe />
+          <Projects />
+          <Experience />
+          <Blogs />
+          <Contact />
+        </div>
       </div>
-    </div>
+    </PageLoadAnimation>
   );
 }
 

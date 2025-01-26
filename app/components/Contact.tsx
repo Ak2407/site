@@ -11,7 +11,7 @@ const Contact = () => {
         {ContactItems.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col lg:flex-row justify-start items-start gap-4 lg:gap-10 w-full"
+            className="flex flex-col lg:flex-row justify-start items-start gap-2 lg:gap-10 w-full"
           >
             <p className="min-w-[150px] text-sm text-gray-400 ">{item.title}</p>
 
