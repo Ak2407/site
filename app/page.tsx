@@ -1,7 +1,6 @@
 import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import Sidebar from "./components/Sidebar";
+import { Link } from "next-view-transitions";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Blogs from "./components/Blogs";
@@ -15,7 +14,6 @@ export default function Home() {
         className="w-full min-h-screen flex flex-row gap-10 justify-center "
         id="About"
       >
-        {/* <Sidebar /> */}
         <div className="flex flex-col gap-10 items-start ">
           <ProfileHeader />
 
@@ -42,7 +40,7 @@ const AboutMe = () => {
         <span className="group">
           <Link
             className="text-blue-500 hover:underline underline-offset-2 hover:text-blue-400"
-            href="https://github.com/Ak2407"
+            href="/blogs/stack"
           >
             tech stack
           </Link>

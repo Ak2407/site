@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 // import { DM_Sans, Onest } from "next/font/google";
 import "./globals.css";
+import { ViewTransitions } from "next-view-transitions";
 
 const graphik = localFont({
   src: [
@@ -28,12 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${graphik.className} antialiased w-full min-h-screen`}>
-        <div className="max-w-[700px] mx-auto py-10 px-6 lg:px-10 lg:py-20  min-h-screen">
-          {children}
-        </div>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${graphik.className} antialiased w-full min-h-screen`}
+        >
+          <div className="max-w-[700px] mx-auto py-10 px-6 lg:px-10 lg:py-20  min-h-screen">
+            {children}
+          </div>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
