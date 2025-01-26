@@ -1,44 +1,31 @@
-import {
-  ArrowUpRightIcon,
-  GithubIcon,
-  LinkedinIcon,
-  MailIcon,
-  TwitterIcon,
-} from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "./components/Sidebar";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Blogs from "./components/Blogs";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
     <div
       className="w-full min-h-screen flex flex-row gap-10 justify-center  "
-      id="Home"
+      id="About"
     >
       <Sidebar />
-      <div className="max-w-[700px]  flex flex-col gap-10 items-start pt-10 px-8 sm:py-20 sm:px-8 border-0 lg:border-x-[0.5px]  min-h-screen">
+      <div className="max-w-[700px]  flex flex-col gap-10 items-start py-10 px-8 sm:py-20 sm:px-8 border-0 lg:border-l-[0.5px]  min-h-screen">
         <ProfileHeader />
 
         <AboutMe />
         <Projects />
         <Experience />
+        <Blogs />
+        <Contact />
       </div>
     </div>
   );
 }
-
-const SocialLinks = () => {
-  return (
-    <div className="flex w-full items-center justify-center gap-10 ">
-      <TwitterIcon className="w-5 h-5 text-gray-400 hover:text-blue-300 cursor-pointer" />
-      <LinkedinIcon className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer" />
-      <GithubIcon className="w-5 h-5 text-gray-400 hover:text-gray-900 cursor-pointer" />
-      <MailIcon className="w-5 h-5 text-gray-400 hover:text-red-300 cursor-pointer" />
-    </div>
-  );
-};
 
 const AboutMe = () => {
   return (
@@ -80,7 +67,7 @@ const ProfileHeader = () => {
         <div className="flex flex-col h-full ">
           <h1 className="text-[20px] ">Akshit Gupta</h1>
           <p className="text-[14px] text-gray-600 ">
-            Full stack developer, working remotely.
+            Full stack developer.
             <span></span>
           </p>
         </div>

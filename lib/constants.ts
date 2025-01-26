@@ -58,3 +58,49 @@ export const ExperienceItems = [
       "Rapid Innovation is a online platform and one stop solution for developing complex AI and Web3 projects. I work as Full stack intern at Rapid Innovation to build enterprise level solutions and work with cutting edge technologies along the way.",
   },
 ];
+
+export const BlogItems = [
+  {
+    title: "Why is switched to Neovim",
+    date: "26 Jan 2025",
+    url: "https://www.akshit.app/",
+  },
+  {
+    title: "How to have a local offline AI assistant.",
+    date: "13 Dec 2024",
+    url: "https://www.akshit.app/",
+  },
+  {
+    title: "Why is Engineering Jobs broken",
+    date: "4 Sep 2024",
+    url: "https://www.akshit.app/",
+  },
+  {
+    title: "How I trick my brain to learn new things fast.",
+    date: "18 Aug 2024",
+    url: "https://www.akshit.app/",
+  },
+];
+
+export const ContactItems = [
+  {
+    title: "Twitter",
+    name: "DevAxit",
+    url: "https://x.com/DevAxit",
+  },
+  {
+    title: "Github",
+    name: "Ak2407",
+    url: "https://github.com/Ak2407",
+  },
+  {
+    title: "LinkedIn",
+    name: "Akshit Gupta",
+    url: "https://www.linkedin.com/in/akshit-gupta-907082203/",
+  },
+  {
+    title: "Mail",
+    name: "akshu.24gupta@gmail.com",
+    url: "mailto:akshu.24gupta@gmail.com",
+  },
+];

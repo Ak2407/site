@@ -1,14 +1,14 @@
-import { ExperienceItems } from "@/lib/constants";
+import { BlogItems } from "@/lib/constants";
 import { ArrowUpRightIcon } from "lucide-react";
 
-const Experience = () => {
+const Blogs = () => {
   return (
-    <div id="Experience" className="flex flex-col gap-8 w-full">
+    <div id="Blogs" className="flex flex-col gap-8 w-full">
       <h1 className="text-base underline underline-offset-4 decoration-wavy decoration-gray-300">
-        Work Experience
+        Blogs
       </h1>
-      <div className="flex flex-col gap-10 w-full pl-0">
-        {ExperienceItems.map((item, index) => (
+      <div className="flex flex-col gap-4 w-full pl-0">
+        {BlogItems.map((item, index) => (
           <div
             key={index}
             className="flex flex-col lg:flex-row justify-start items-start gap-4 lg:gap-10 w-full"
@@ -29,14 +29,6 @@ const Experience = () => {
                   />
                 </a>
               </div>
-              <p className="text-sm text-gray-500 tracking-wide ">
-                {item.location}
-              </p>
-
-              <p className="text-sm text-gray-500 tracking-wide mt-2 ">
-                {item.description}
-              </p>
-              {/* <ImageGallery imagesUrl={item.images} /> */}
             </div>
           </div>
         ))}
@@ -45,4 +37,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Blogs;

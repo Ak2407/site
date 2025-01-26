@@ -4,16 +4,17 @@ import { ChevronRightIcon } from "lucide-react";
 import { useState } from "react";
 
 const tabsName = [
-  { name: "Home", id: "Home" },
+  { name: "About", id: "About" },
   { name: "Projects", id: "Projects" },
   { name: "Experience", id: "Experience" },
   { name: "Blogs", id: "Blogs" },
+  { name: "Contact", id: "Contact" },
 ];
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState<
-    "Home" | "Projects" | "Experience" | "Blogs"
-  >("Home");
+    "About" | "Projects" | "Experience" | "Blogs" | "Contact"
+  >("About");
 
   return (
     <div className="hidden lg:flex flex-col items-start gap-1 pt-10 h-screen sticky top-0 ">
