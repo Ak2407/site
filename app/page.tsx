@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
 import { PageLoadAnimation } from "./components/page-load";
+import GithubChart from "./components/GithubChart";
 
 export default function Home() {
   return (
@@ -14,9 +15,9 @@ export default function Home() {
         className="w-full min-h-screen flex flex-row gap-10 justify-center "
         id="About"
       >
-        <div className="flex flex-col gap-10 items-start ">
+        <div className="flex flex-col gap-10 items-start overflow-x-auto ">
           <ProfileHeader />
-
+          <GithubChart />
           <AboutMe />
           <Projects />
           <Experience />

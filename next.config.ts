@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  pageExtensions: ["tsx", "mdx", "ts"],
 
   eslint: {
     ignoreDuringBuilds: true,
@@ -12,6 +14,12 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["res.cloudinary.com"],
   },
+
+  experimental: {
+    mdxRs: true,
+  },
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
