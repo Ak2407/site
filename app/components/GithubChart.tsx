@@ -36,7 +36,7 @@ const ContributionBox = () => {
 
 const GithubChart = () => {
   return (
-    <div className="overflow-x-hidden w-full flex">
+    <div className="overflow-x-hidden w-full flex border-b-[1px] border-gray-200 border-dashed pb-10">
       <div className="flex flex-col gap-0.5 min-w-fit">
         {Array.from({ length: ROWS }).map((_, rowIndex) => (
           <div key={rowIndex} className="flex gap-0.5 whitespace-nowrap">

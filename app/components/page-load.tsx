@@ -1,6 +1,8 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
+import React from "react";
+
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface PageLoadAnimationProps {
@@ -14,20 +16,42 @@ export function PageLoadAnimation({ children }: PageLoadAnimationProps) {
     setIsVisible(true);
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each child animation
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: [0.22, 1, 0.36, 1], // Custom cubic-bezier for smooth easing
+      },
+    },
+  };
+
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, filter: "blur(10px)", scale: 1.05 }}
-          animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-          exit={{ opacity: 0, filter: "blur(10px)", scale: 1.05 }}
-          transition={{
-            duration: 0.7,
-            ease: [0.22, 1, 0.36, 1], // Custom cubic-bezier for smooth easing
-          }}
-          className="w-full h-full"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="w-full h-full flex flex-col gap-10 items-start overscroll-x-auto "
         >
-          {children}
+          {React.Children.map(children, (child, index) => (
+            <motion.div key={index} variants={childVariants} className="w-full">
+              {child}
+            </motion.div>
+          ))}
         </motion.div>
       )}
     </AnimatePresence>
