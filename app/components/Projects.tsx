@@ -34,22 +34,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-// const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
-//   return (
-//     <div className=" flex flex-row gap-4 overflow-x-scroll  py-4 max-w-[400px]  scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-visible">
-//       {imagesUrl.map((url, index) => (
-//         <div
-//           key={index}
-//           className="flex-shrink-0 h-full flex flex-col justify-center items-center"
-//         >
-//           <img
-//             src={url}
-//             className="w-[100px] sm:w-[139px] rounded-sm sm:rounded-lg"
-//             alt="ProjectImage"
-//           />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
