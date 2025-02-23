@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { MoveLeftIcon, MoveRightIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Image {
@@ -17,6 +17,7 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
     src: url,
     alt: "Project Image",
   }));
+
   useEffect(() => {
     if (selectedImage) {
       document.body.style.overflow = "hidden"; // Disable scrolling
@@ -74,7 +75,7 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
             <img
               src={image.src}
               alt={image.alt}
-              className="w-[100px] sm:w-[139px] rounded-sm sm:rounded-lg  "
+              className="w-[100px] sm:w-[139px] rounded-sm sm:rounded-lg"
               loading="lazy"
             />
           </motion.div>
@@ -88,7 +89,7 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center"
+            className="fixed inset-0 bg-black bg-opacity-60 z-50 flex flex-col items-center justify-center"
             onClick={(e) => {
               if (e.target === e.currentTarget) setSelectedImage(null);
             }}
@@ -98,8 +99,9 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="relative max-w-7xl mx-auto px-4"
+              className="relative max-w-7xl mx-auto px-4 flex flex-col items-center"
             >
+              {/* Image Container */}
               <div className="relative">
                 <img
                   src={selectedImage.src}
@@ -108,16 +110,19 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
                   style={{ opacity: isLoading ? 0 : 1 }}
                   onLoad={() => setIsLoading(false)}
                 />
+              </div>
 
+              {/* Navigation Arrows Below the Image */}
+              <div className="mt-4 flex items-center justify-center gap-8 lg:hidden ">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     navigateImage("prev");
                   }}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white p-2 rounded-full hover:opacity-80 transition-colors bg-white"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <MoveLeftIcon className="w-6 h-6 text-black" />
                 </button>
 
                 <button
@@ -125,10 +130,10 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
                     e.stopPropagation();
                     navigateImage("next");
                   }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white p-2 rounded-full hover:opacity-80 transition-colors bg-white"
                   aria-label="Next image"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <MoveRightIcon className="w-6 h-6 text-black" />
                 </button>
               </div>
             </motion.div>
