@@ -66,7 +66,7 @@ export function LinkTag({
       href={href}
       target={external ? "_blank" : "_self"}
       className={cn(
-        `relative text-sm ${underline ? "underline" : "hover:underline "} text-black hover:opacity-60 underline-offset-4 group `,
+        `relative text-sm ${underline ? "underline" : "hover:underline "} text-gray-600 hover:opacity-60 underline-offset-4 group `,
         className,
       )}
     >

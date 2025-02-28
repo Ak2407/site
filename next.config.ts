@@ -11,9 +11,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    domains: ["res.cloudinary.com"],
-  },
 
   experimental: {
     mdxRs: true,

@@ -19,8 +19,15 @@ const graphik = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Akshit Gupta",
-  description: "Full stack developer , working remotely.",
+  metadataBase: new URL("https://www.akshit.app/"),
+  alternates: {
+    canonical: "/",
+  },
+  title: {
+    default: "Akshit Gupta",
+    template: "%s | Akshit Gupta",
+  },
+  description: "I write Code",
 };
 
 export default function RootLayout({

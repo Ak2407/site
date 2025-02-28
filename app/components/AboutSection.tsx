@@ -11,6 +11,7 @@ const AboutSection = () => {
         <LinkTag underline href="/blogs/stack">
           tech stack
         </LinkTag>
+        . Yes I am a minimalist how do you know !??
       </Paragraph>
     </div>
   );
