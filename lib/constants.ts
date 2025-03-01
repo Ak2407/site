@@ -47,24 +47,9 @@ export const ExperienceItems = [
 
 export const BlogItems = [
   {
-    title: "Why is switched to Neovim",
-    date: "26 Jan 2025",
-    url: "https://www.akshit.app/",
-  },
-  {
-    title: "How to have a local offline AI assistant.",
-    date: "13 Dec 2024",
-    url: "https://www.akshit.app/",
-  },
-  {
-    title: "Why is Engineering Jobs broken",
-    date: "4 Sep 2024",
-    url: "https://www.akshit.app/",
-  },
-  {
-    title: "How I trick my brain to learn new things fast.",
-    date: "18 Aug 2024",
-    url: "https://www.akshit.app/",
+    title: "Tools and Tech I use daily",
+    date: "March 1 2025",
+    url: "/blogs/stack",
   },
 ];
 
