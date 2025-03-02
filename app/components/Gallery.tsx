@@ -50,11 +50,11 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
 
   return (
     <>
-      <div className="flex flex-row gap-4 overflow-x-scroll py-4 max-w-[400px] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-visible">
+      <div className="flex flex-row gap-4 py-4 max-w-[400px]">
         {images.map((image, index) => (
           <motion.div
             key={index}
-            className="flex-shrink-0 h-full flex flex-col justify-center items-center cursor-pointer"
+            className="flex-shrink-0 h-full flex flex-col justify-center items-center cursor-pointer "
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
             onClick={() => setSelectedImage(image)}

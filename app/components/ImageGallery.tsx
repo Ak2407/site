@@ -64,7 +64,7 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
 
   return (
     <>
-      <div className="flex flex-row gap-4 overflow-x-scroll py-4 max-w-[400px] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 scrollbar-visible">
+      <div className="flex flex-row gap-4 overflow-x-scroll py-4 max-w-[400px] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent">
         {images.map((image, index) => (
           <motion.div
             key={index}

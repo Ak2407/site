@@ -39,7 +39,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${graphik.className} antialiased w-full min-h-screen`}
+          className={`${graphik.className} antialiased w-full min-h-screen relative`}
         >
           <div className="max-w-[700px] mx-auto py-10 px-6 lg:px-10 lg:py-20  min-h-screen">
             {children}
