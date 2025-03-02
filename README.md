@@ -1,12 +1,12 @@
 # TODO
 
-[ ] Add Blogs Pages (Tech Stack)
 [ ] Change Left and Right Arrows in Image Gallery
 [ ] Make favicon
 [ ] Make a Logo
 [ ] Make Open Graph Images
-[ ] Dark Mode ???
 
+[x] Dark Mode ???
+[x ] Add Blogs Pages (Tech Stack)
 [X] Deploy to Vercel
 [X] Click Project Images
 [X] Add Image section with opening animation and modal , maybe videos??

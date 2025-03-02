@@ -64,6 +64,7 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
 
   return (
     <>
+      {/* Image Thumbnails */}
       <div className="flex flex-row gap-4 overflow-x-scroll py-4 max-w-[400px] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent">
         {images.map((image, index) => (
           <motion.div
@@ -82,6 +83,7 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
         ))}
       </div>
 
+      {/* Modal for Image Preview */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -112,30 +114,32 @@ const ImageGallery = ({ imagesUrl }: { imagesUrl: string[] }) => {
                 />
               </div>
 
-              {/* Navigation Arrows Below the Image */}
-              <div className="mt-4 flex items-center justify-center gap-8 lg:hidden ">
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigateImage("prev");
-                  }}
-                  className="text-white p-2 rounded-full hover:opacity-80 transition-colors bg-white"
-                  aria-label="Previous image"
-                >
-                  <MoveLeftIcon className="w-6 h-6 text-black" />
-                </button>
+              {/* Navigation Arrows (Shown only if there are multiple images) */}
+              {images.length > 1 && (
+                <div className="mt-4 flex items-center justify-center gap-6 lg:hidden">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateImage("prev");
+                    }}
+                    className="p-3 rounded-full bg-white/20 backdrop-blur-md shadow-lg hover:bg-white/30 hover:scale-110 transition-all duration-300"
+                    aria-label="Previous image"
+                  >
+                    <MoveLeftIcon className="w-7 h-7 text-white drop-shadow-md" />
+                  </button>
 
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigateImage("next");
-                  }}
-                  className="text-white p-2 rounded-full hover:opacity-80 transition-colors bg-white"
-                  aria-label="Next image"
-                >
-                  <MoveRightIcon className="w-6 h-6 text-black" />
-                </button>
-              </div>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateImage("next");
+                    }}
+                    className="p-3 rounded-full bg-white/20 backdrop-blur-md shadow-lg hover:bg-white/30 hover:scale-110 transition-all duration-300"
+                    aria-label="Next image"
+                  >
+                    <MoveRightIcon className="w-7 h-7 text-white drop-shadow-md" />
+                  </button>
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
