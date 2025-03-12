@@ -9,7 +9,7 @@ export function Heading({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <h1 className={cn("text-[20px]", className)}>{children}</h1>;
+  return <h1 className={cn("text-xl ", className)}>{children}</h1>;
 }
 
 export function SubHeading({
@@ -24,7 +24,7 @@ export function SubHeading({
   return (
     <h1
       className={cn(
-        `text-base ${underline ? "underline underline-offset-4" : ""} decoration-wavy decoration-gray-200`,
+        `text-base ${underline ? "underline underline-offset-4" : ""}  decoration-wavy decoration-gray-200`,
         className,
       )}
     >
@@ -41,9 +41,7 @@ export function Paragraph({
   className?: string;
 }) {
   return (
-    <p className={cn("text-[15px]/6 text-gray-600/80", className)}>
-      {children}
-    </p>
+    <p className={cn("text-[15px]/6 text-gray-700", className)}>{children}</p>
   );
 }
 export function LinkTag({

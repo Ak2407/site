@@ -1,6 +1,7 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import { Link } from "next-view-transitions";
 import { highlight } from "sugar-high";
+import { ArrowUpRightIcon } from "lucide-react";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -11,7 +12,7 @@ type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
 const components = {
   h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0 fade-in text-lg " {...props} />
+    <h1 className="font-medium pt-12 mb-0 fade-in text-xl" {...props} />
   ),
   h2: (props: HeadingProps) => (
     <h2 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
@@ -21,7 +22,7 @@ const components = {
   ),
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
   p: (props: ParagraphProps) => (
-    <p className="text-gray-800 leading-snug" {...props} />
+    <p className="text-[15px]/6 text-gray-700" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol className="text-gray-800 list-decimal pl-5 space-y-2" {...props} />
@@ -37,7 +38,8 @@ const components = {
     <strong className="font-medium" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className = "text-blue-500 hover:text-blue-700";
+    const className =
+      "relative text-sm text-gray-600 hover:underline hover:opacity-60 underline-offset-4 group";
     if (href?.startsWith("/")) {
       return (
         <Link href={href} className={className} {...props}>
@@ -61,6 +63,9 @@ const components = {
         {...props}
       >
         {children}
+        <span className="absolute -top-1 -right-3 text-xs">
+          <ArrowUpRightIcon className="inline-block text-gray-400 group-hover:opacity-60 w-3 h-3" />
+        </span>
       </a>
     );
   },

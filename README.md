@@ -4,6 +4,7 @@
 [ ] Make a Logo
 [ ] Make Open Graph Images
 [ ] Add Noise to background
+[ ] Add Some POP
 
 [x] Change Left and Right Arrows in Image Gallery
 [x ] Add Blogs Pages (Tech Stack)

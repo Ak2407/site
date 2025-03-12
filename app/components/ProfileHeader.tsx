@@ -10,7 +10,7 @@ const ProfileHeader = () => {
         width={30}
         height={30}
         alt="Akshit Gupta"
-        className="transition-all duration-100 hover:grayscale cursor-pointer"
+        className="transition-all duration-100 hover:grayscale"
       />
 
       <div className="flex flex-row justify-between w-full ">
