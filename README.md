@@ -1,17 +1,17 @@
 # TODO
 
-[ ] Change Left and Right Arrows in Image Gallery
 [ ] Make favicon
 [ ] Make a Logo
 [ ] Make Open Graph Images
+[ ] Add Noise to background
 
-[x] Dark Mode ???
+[x] Change Left and Right Arrows in Image Gallery
 [x ] Add Blogs Pages (Tech Stack)
-[X] Deploy to Vercel
-[X] Click Project Images
-[X] Add Image section with opening animation and modal , maybe videos??
-[X] Smooth Loading Animation on each block differently
-[X] Change Profile Header Section
-[X] Add constant typography
-[X] Change text select color
-[X] Add dashed borders in between sections
+[x] Deploy to Vercel
+[x] Click Project Images
+[x] Add Image section with opening animation and modal , maybe videos??
+[x] Smooth Loading Animation on each block differently
+[x] Change Profile Header Section
+[x] Add constant typography
+[x] Change text select color
+[x] Add dashed borders in between sections

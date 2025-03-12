@@ -1,25 +1,8 @@
-"use client";
 import Image from "next/image";
 import { Heading, LinkTag } from "./Typography";
 import { ContactItems } from "@/lib/constants";
-import { useEffect, useState } from "react";
 
 const ProfileHeader = () => {
-  const [shake, setShake] = useState(false);
-
-  useEffect(() => {
-    if (shake) {
-      const interval = setInterval(() => {
-        document.body.style.transform = `translate(${Math.random() * 10 - 5}px, ${Math.random() * 10 - 5}px)`;
-      }, 50);
-      setTimeout(() => {
-        clearInterval(interval);
-        document.body.style.transform = "translate(0,0)";
-        setShake(false);
-      }, 2000);
-    }
-  }, [shake]);
-
   return (
     <div className="flex flex-col gap-2 w-full">
       <Image
@@ -28,7 +11,6 @@ const ProfileHeader = () => {
         height={30}
         alt="Akshit Gupta"
         className="transition-all duration-100 hover:grayscale cursor-pointer"
-        onClick={() => setShake(true)}
       />
 
       <div className="flex flex-row justify-between w-full ">
