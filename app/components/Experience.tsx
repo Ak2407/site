@@ -19,7 +19,7 @@ const Experience = () => {
             <div className="flex flex-col gap-1 ">
               <div className=" flex flex-row items-center gap-4 w-full ">
                 <LinkTag href={item.url} external>
-                  {item.title}
+                  {item.companyName}
                 </LinkTag>
               </div>
               <p className="text-sm text-gray-500 tracking-wide ">
