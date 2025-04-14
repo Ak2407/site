@@ -36,9 +36,19 @@ export const ProjectItems = [
 
 export const ExperienceItems = [
   {
-    date: "Jan 2025 - Now",
+    date: "April 2025 - Now",
     url: "https://www.rapidinnovation.io/",
-    title: "Full Stack Developer Intern at Rapid Innovation",
+    companyName: "Rapid Innovation",
+    title: "Associate Developer - Full Stack",
+    location: "Remote",
+    description:
+      "Rapid Innovation is a online platform and one stop solution for developing complex AI and Web3 projects. I work as Full stack intern at Rapid Innovation to build enterprise level solutions and work with cutting edge technologies along the way.",
+  },
+  {
+    date: "Jan 2025 - April 2025",
+    url: "https://www.rapidinnovation.io/",
+    companyName: "Rapid Innovation",
+    title: "Full Stack Intern",
     location: "Remote",
     description:
       "Rapid Innovation is a online platform and one stop solution for developing complex AI and Web3 projects. I work as Full stack intern at Rapid Innovation to build enterprise level solutions and work with cutting edge technologies along the way.",
